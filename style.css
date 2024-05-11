@@ -374,12 +374,13 @@ header .link-primary:nth-child(1) {
   padding: 5px 0 30px 0;
 }
 .container-team-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
 }
 .team-card {
-  max-width: 300px;
+  width: 300px;
   height: 435px;
   background: var(--main-black);
   color: var(--main-yellow);
@@ -415,6 +416,7 @@ header .link-primary:nth-child(1) {
   font-size: var(--fs-16);
   font-weight: 500;
 }
+
 
 /* sec hero */
 .sec-hero {
