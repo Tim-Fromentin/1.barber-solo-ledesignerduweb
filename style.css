@@ -355,8 +355,15 @@ header .link-primary:nth-child(1) {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .sec-presta .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 
 
+/* section team */
 .sec-team {
   display: flex;
   flex-direction: column;
