@@ -81,7 +81,7 @@ nav {
   background: var(--main-yellow);
   position: fixed;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px;
   display: flex;
   justify-content: center;
 }
@@ -96,7 +96,47 @@ nav {
 .nav-link:not(:last-child){
   margin-right: 40px;
 }
+.btn-hamb {
+  height: 50px;
+  width: 50px;
+  background-image: url(./ressources/hamburger.svg);
+  background-position: center;
+  background-size: contain;
+  display: none;
+  z-index: 500;
+}
+.btn-hamb-active {
+  background-image: url(./ressources/cross.svg);
+}
 
+@media screen and (max-width: 515px) {
+  .box-nav-link {
+    display: none;
+  }
+  nav {
+    justify-content: end;
+  }
+  .btn-hamb {
+    display: block;
+  }
+}
+.nav-link-active {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  right: 0;
+  top: 0;
+  padding: 50px 25px;
+  background: #e6d38ce9;
+  height: 100vh;
+  width: 40vw;
+}
+.nav-link-active a.nav-link {
+  margin: 0;
+}
 header {
   height: 100vh;
   color: white;
@@ -108,6 +148,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 header h2 {
   font-weight: lighter;

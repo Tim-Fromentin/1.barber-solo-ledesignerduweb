@@ -33,3 +33,13 @@ function handleSlide3(){
     c2.classList.remove("circle-active")
     c1.classList.remove("circle-active")
 }
+
+// responsive
+const btnHamb = document.querySelector(".btn-hamb");
+const navLink = document.querySelector(".box-nav-link");
+
+btnHamb.addEventListener("click", btnHambActive)
+function btnHambActive(){
+    btnHamb.classList.toggle("btn-hamb-active")
+    navLink.classList.toggle("nav-link-active")
+}
