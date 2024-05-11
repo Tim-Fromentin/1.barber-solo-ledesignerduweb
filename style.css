@@ -44,10 +44,12 @@ section {
   font-family: var(--title-font);
   font-size: var(--fs-72);
 }
+
 .surtitle {
   font-weight: bold;
   font-size: var(--fs-36);
   display: flex;
+  align-items: center;
   text-decoration: underline;
   text-align: center;
 }
@@ -75,7 +77,34 @@ section {
 .link-primary span {
   margin-right: 5px;
 }
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 50px 100px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .title {
+    font-size: var(--fs-50);
+  }
+  section {
+    padding: 50px;
+  }
+  .surtitle {
+    font-size: var(--fs-20);
+  }
+  .subtitle {
+    font-size: var(--fs-16);
+  }
+}
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: var(--fs-42);
+  }
+  section {
+    padding: 50px 20px;
+  }
 
+}
 /* navbar */
 nav {
   background: var(--main-yellow);
@@ -97,8 +126,8 @@ nav {
   margin-right: 40px;
 }
 .btn-hamb {
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
   background-image: url(./ressources/hamburger.svg);
   background-position: center;
   background-size: contain;
@@ -148,8 +177,10 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
+
 header h2 {
   font-weight: lighter;
   font-size: var(--fs-30);
@@ -167,11 +198,23 @@ header .link-primary:nth-child(1) {
   background: var(--main-yellow);
   margin-right: 5px;
 }
+@media screen and (max-width: 900px) {
+  header {
+    padding: 80px 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header h2 {
+    font-size: var(--fs-24);
+  }
+}
+
 /* section valeur */
 .sec-value {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--main-white);
 }
 .title-value {
   display: flex;
@@ -188,6 +231,7 @@ header .link-primary:nth-child(1) {
   margin-top: 72px;
   display: flex;
 }
+
 .container-value {
   width: 50%;
   margin-right: 100px;
@@ -229,6 +273,28 @@ header .link-primary:nth-child(1) {
 .circle-active {
   background: #000;
 }
+
+@media screen and (max-width: 768px) {
+  .sec-value .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-value {
+    width: 100%;
+    margin: 0 0 50px 0;
+  }
+  .container-slide {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title-value {
+    font-size: var(--fs-16);
+  }
+}
+
+
 .sec-presta {
   background: var(--main-black);
   color: var(--main-white);
