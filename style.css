@@ -1,3 +1,4 @@
+/* reset */
 *,
 ::before,
 ::after {
@@ -36,6 +37,7 @@
 body {
   font-family: var(--base-font);
 }
+/* spacing */
 section {
   padding: 50px 200px;
 }
@@ -77,6 +79,7 @@ section {
 .link-primary span {
   margin-right: 5px;
 }
+/* responsive */
 @media screen and (max-width: 1024px) {
   section {
     padding: 50px 100px;
@@ -101,7 +104,7 @@ section {
     font-size: var(--fs-42);
   }
   section {
-    padding: 50px 20px;
+    padding: 50px 15px;
   }
 
 }
@@ -125,6 +128,7 @@ nav {
 .nav-link:not(:last-child){
   margin-right: 40px;
 }
+/* btn for mobile screen */
 .btn-hamb {
   height: 35px;
   width: 35px;
@@ -137,6 +141,7 @@ nav {
 .btn-hamb-active {
   background-image: url(./ressources/cross.svg);
 }
+/* responsive */
 
 @media screen and (max-width: 515px) {
   .box-nav-link {
@@ -149,23 +154,25 @@ nav {
     display: block;
   }
 }
+/* box mobile screen */
 .nav-link-active {
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
   text-align: center;
   right: 0;
   top: 0;
   padding: 50px 25px;
-  background: #e6d38ce9;
-  height: 100vh;
-  width: 40vw;
+  background: #e6d38c;
+  height: 50vh;
+  width: 100vw;
 }
 .nav-link-active a.nav-link {
   margin: 0;
 }
+/* header */
 header {
   height: 100vh;
   color: white;
@@ -198,6 +205,8 @@ header .link-primary:nth-child(1) {
   background: var(--main-yellow);
   margin-right: 5px;
 }
+/* responsive */
+
 @media screen and (max-width: 900px) {
   header {
     padding: 80px 100px;
@@ -273,6 +282,7 @@ header .link-primary:nth-child(1) {
 .circle-active {
   background: #000;
 }
+/* responsive */
 
 @media screen and (max-width: 768px) {
   .sec-value .content {
@@ -294,7 +304,7 @@ header .link-primary:nth-child(1) {
   }
 }
 
-
+/* section presta */
 .sec-presta {
   background: var(--main-black);
   color: var(--main-white);
@@ -355,6 +365,8 @@ header .link-primary:nth-child(1) {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+/* responsive */
+
 @media screen and (max-width: 768px) {
   .sec-presta .content {
     display: grid;
@@ -368,7 +380,7 @@ header .link-primary:nth-child(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: auto;
 }
 .sec-team .subtitle {
   padding: 5px 0 30px 0;
@@ -436,6 +448,7 @@ header .link-primary:nth-child(1) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .sec-hero h1 {
   font-family: var(--title-font);
@@ -446,7 +459,21 @@ header .link-primary:nth-child(1) {
   font-size: var(--fs-20);
   font-weight: bold;
 }
+/* responsive */
 
+@media screen and (max-width: 768px) {
+  .sec-hero h1 {
+    font-size: var(--fs-30);
+  }
+}
+@media screen and (max-width: 425px) {
+  .sec-hero h1 {
+    font-size: var(--fs-20);
+  }
+  .sec-hero h2 {
+    font-size: var(--fs-16);
+  }
+}
 /* sec adress */
 .sec-adress {
   background: var(--main-yellow);
@@ -461,6 +488,7 @@ header .link-primary:nth-child(1) {
 }
 .sec-adress .subtitle {
   padding: 5px 0 50px 0;
+  text-align: center;
 }
 .container-adress img {
   height: 24px;
@@ -498,7 +526,17 @@ header .link-primary:nth-child(1) {
   text-align: center;
   margin-bottom: 15px;
 }
+/* responsive */
 
+@media screen and (max-width: 528px) {
+  .sec-adress .content {
+    grid-template-columns: 1fr;
+
+  }
+  .box-adress {
+    width: 100%;
+  }
+}
 /* footer */
 footer {
   background: var(--main-black);
@@ -508,4 +546,11 @@ footer {
 footer a {
   color: var(--main-white);
   font-size: var(--fs-16);
+}
+/* responsive */
+
+@media screen and (max-width: 320px) {
+ footer a {
+  font-size: var(--fs-14);
+ } 
 }
